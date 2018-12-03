@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.applandeo.materialcalendarview.CalendarView;
@@ -134,7 +135,7 @@ public class MonthViewFragment extends Fragment {
         } else {
             mEventsListAdapter.setEvents(eventsOnDay);
         }
-        shouldShowEmptyListTextViey(eventsOnDay.size());
+        shouldShowEmptyListTextView(eventsOnDay.size());
     }
 
     /**
@@ -174,7 +175,7 @@ public class MonthViewFragment extends Fragment {
      * Hide the EventListView if there are no events. Show a message stating there are no evets
      * @param size, the size of the list of available events.
      */
-    private void shouldShowEmptyListTextViey(int size) {
+    private void shouldShowEmptyListTextView(int size) {
         mEmptyListTextView.setVisibility(size == 0? View.VISIBLE : View.GONE);
         mEventsListView.setVisibility( size != 0? View.VISIBLE : View.GONE);
     }
